@@ -1,12 +1,15 @@
-import express from 'express';
-import { setBudget, getBudget } from '../controllers/budgetController.js';
+import express from "express";
+import { createBudget, trackBudget, getBudgets } from "../controllers/budgetController.js";
 
 const router = express.Router();
 
-// Set or update a budget
-router.post('/', setBudget);
+// Create a new budget
+router.post("/", createBudget);
 
-// Get budget for a user
-router.get('/', getBudget);
+// Track budget when a transaction is made
+router.post("/track", trackBudget);
+
+// Get all budgets
+router.get("/", getBudgets);
 
 export default router;
