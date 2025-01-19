@@ -23,6 +23,12 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/budgets', budgetRoutes);
 app.use('/api/users', userRoutes);
 
+
+// Root route for the API
+app.get('/', (req, res) => {
+    res.send('API is listening. Alain Niganze');
+});
+
 // MongoDB Connection
 connectDB();
 
