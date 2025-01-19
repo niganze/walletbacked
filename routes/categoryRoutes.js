@@ -10,3 +10,4 @@ router.post('/', createCategory);
 router.get('/', getAllCategories);
 
 export default router;
+
